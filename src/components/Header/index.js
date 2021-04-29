@@ -2,11 +2,9 @@ import React from 'react';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import SidebarToggler from "../SidebarToggler.js";
 import { 
     Container, 
-    LeftContainer,
-    MenuToggler,
-    Logo,
     Search,
     SearchContainer,
     SearchField,
@@ -16,19 +14,12 @@ import {
     Avatar,
 }from "./header.elements.js";
 
-require('dotenv').config();
-
-
-function Header() {
-    const logo = "https://cdn.cultofmac.com/wp-content/uploads/2018/01/YouTube-dark.jpg";
+function Header({ toggleSidebar }) {
     const avatar = "https://eu.ui-avatars.com/api/?name=John+Doe"
-   
+
     return (
         <Container>
-            <LeftContainer>
-                <MenuToggler />
-                <Logo src={logo} alt="Logo" />
-            </LeftContainer>
+            <SidebarToggler toggle={toggleSidebar}/>
             <SearchContainer>
                 <Search>
                     <SearchField type="text" />

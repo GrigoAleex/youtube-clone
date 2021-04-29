@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import SearchIcon from "@material-ui/icons/Search";
-import MenuIcon from '@material-ui/icons/Menu';
-
 
 export const Container = styled.nav`
     display: flex;
@@ -13,21 +11,6 @@ export const Container = styled.nav`
     top: 0;
     background: #000;
     z-index: 999;
-`;
-
-export const LeftContainer = styled.div`
-    display: flex;
-    margin-left: 2em;
-    color: #fff;
-    align-items: center; 
-`;
-
-export const Logo = styled.img`
-    height: 60px;
-`;
-
-export const MenuToggler = styled(MenuIcon)`
-    cursor: pointer;
 `;
 
 export const SearchContainer = styled.div`
